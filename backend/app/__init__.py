@@ -17,7 +17,8 @@ def create_app():
     db.init_app(app)
     bcrypt.init_app(app)
     migrate.init_app(app, db)
-
+    
+    #Where i register my routes
     from .routes.auth_routes import auth_bp
     from .routes.item_routes import item_bp
 
